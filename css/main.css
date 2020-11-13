@@ -44,11 +44,10 @@ a {
 /* Header */
 #header {
   text-align: center;
-  margin: 30px auto;
 }
 
 .header-title {
-  font-size: 72px;
+  font-size: 60px;
   font-weight: 700;
   color: #000;
   letter-spacing: 5px;
@@ -59,28 +58,16 @@ a {
   letter-spacing: 2px;
   color: #a8a8a8;
   text-transform: uppercase;
-}
-
-/* Banner */
-.banner-section {
-  position: relative;
-  display: table;
-  width: 100%;
-}
-
-.banner-img img {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
+  padding-left: 2rem;
 }
 
 /* Navbar */
 #navbar {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  padding: 20px 20px;
 }
 
 .navbar-menu {
@@ -100,6 +87,64 @@ a {
 
 .navbar-links:hover {
   color: #a8a8a8;
+}
+
+.menu-btn {
+  /* position: relative;
+  display: flex;
+  justify-content: center;
+	align-items: center; */
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  display: none;
+  /* border: 3px solid #fff; */
+}
+
+.menu-btn__burger {
+  width: 40px;
+  height: 6px;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+
+/* Animation */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 
 /* Skills */
@@ -235,4 +280,30 @@ a {
 }
 .profile-sidebar img {
   width: 125px;
+}
+
+@media screen and (max-width: 900px) {
+  #header {
+    margin: 0 auto;
+  }
+
+  #navbar {
+    padding: 10px 0;
+  }
+  .navbar-menu {
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
 }
