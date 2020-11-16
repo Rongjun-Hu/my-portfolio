@@ -15,67 +15,131 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav id="navbar">
-      <div id="header">
-        <a href="index.html">
-          <h1 class="header-title">Peter</h1>
-        </a>
-        <p class="header-text">front end developer</p>
-      </div>
-      <div class="menu-btn">
-        <div class="menu-btn__burger"></div>
-      </div>
-      <ul class="navbar-menu" id="navbar-menu">
-        <li class="navbar-item">
-          <a href="index.html" class="navbar-links">Home</a>
-        </li>
-        <li class="navbar-item">
-          <a href="education.html" class="navbar-links">Education</a>
-        </li>
-        <li class="navbar-item">
-          <a href="skills.html" class="navbar-links">Skills</a>
-        </li>
-        <li class="navbar-item">
-          <a href="projects.html" class="navbar-links">Projects</a>
-        </li>
+    <nav class="navbar">
+      <a href="#" class="navbar-brand">Peter</a>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
       </ul>
+      <button class="navbar-toggler">
+        <span></span>
+      </button>
     </nav>
 
-    <hr />
+    <header class="intro"></header>
 
-    <!-- About -->
-    <div class="card">
-      <div class="profile-sidebar">
-        <img src="../images/profile.jpeg" alt="" />
-        <ul>
-          <li>
-            <a href="https://github.com/Rongjun-Hu" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/peter-hu-8a6a05190/"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
+    <!-- About Section -->
+    <section id="about" class="container">
+      <div class="card">
+        <div class="profile-sidebar">
+          <img src="../images/profile.jpeg" alt="" />
+          <ul>
+            <li>
+              <a href="https://github.com/Rongjun-Hu" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/peter-hu-8a6a05190/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="profile-main">
-        <h2 class="profile-name">Peter</h2>
-        <p class="profile-position">Front-End Developer</p>
-        <p class="profile-body">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-          impedit porro sunt harum officiis nesciunt, fugiat optio doloribus
-          magnam nemo.
-        </p>
+        <div class="profile-main">
+          <h2 class="profile-name">Peter</h2>
+          <p class="profile-position">Front-End Developer</p>
+          <p class="profile-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            impedit porro sunt harum officiis nesciunt, fugiat optio doloribus
+            magnam nemo.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="container">
+      <h1>This is Education Section</h1>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+      <div class="skills-section" id="skills">
+        <h2 class="skills-header">Skills</h2>
+        <div class="skills-container">
+          <div>
+            <div class="skills-subheader">Professional Skills</div>
+
+            <!-- HTML5 -->
+            <div class="skills-data">
+              <div class="skills-names">
+                <i class="fab fa-html5 skills-icon skills-html-icon"></i>
+                <span class="skills-name">HTML5</span>
+              </div>
+              <div class="skills-bar skills-html-bar"></div>
+              <div>
+                <span class="skills-percentage">60%</span>
+              </div>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="skills-data">
+              <div class="skills-names">
+                <i class="fab fa-css3 skills-icon skills-css-icon"></i>
+                <span class="skills-name">CSS3</span>
+              </div>
+              <div class="skills-bar skills-css-bar"></div>
+              <div>
+                <span class="skills-percentage">50%</span>
+              </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skills-data">
+              <div class="skills-names">
+                <i class="fab fa-js skills-icon skills-js-icon"></i>
+                <span class="skills-name">JavaScript</span>
+              </div>
+              <div class="skills-bar skills-js-bar"></div>
+              <div>
+                <span class="skills-percentage">40%</span>
+              </div>
+            </div>
+
+            <!-- React -->
+            <div class="skills-data">
+              <div class="skills-names">
+                <i class="fab fa-react skills-icon skills-react-icon"></i>
+                <span class="skills-name">ReactJS</span>
+              </div>
+              <div class="skills-bar skills-react-bar"></div>
+              <div>
+                <span class="skills-percentage">40%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+      <h1>This is Projects Section</h1>
+    </section>
 
     <!-- Footer -->
-    <footer id="footer">&copy; 2020 Peter Hu</footer>
+    <footer id="footer">
+      Copyright &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      Peter Hu
+    </footer>
 
     <script src="../js/index.js"></script>
   </body>
