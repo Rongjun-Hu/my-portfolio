@@ -25,6 +25,7 @@ body {
   position: relative;
   padding-bottom: 58px;
   min-height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 
 #footer {
@@ -35,123 +36,212 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  color: #fff;
+  /* padding-top: 90px; */
 }
 
 a {
   text-decoration: none;
 }
 
-/* Header */
-#header {
-  text-align: center;
-}
-
-.header-title {
-  font-size: 60px;
-  font-weight: 700;
-  color: #000;
-  letter-spacing: 5px;
-}
-
-.header-text {
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: #a8a8a8;
-  text-transform: uppercase;
-  padding-left: 2rem;
-}
-
 /* Navbar */
-#navbar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
+.navbar {
+  /* background-color: #000; */
+  border-radius: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: 0.4s;
 }
 
-.navbar-menu {
-  display: flex;
+.navbar.sticky {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 5px 10px;
+  transition: all 0.4s ease-in-out;
 }
 
-.navbar-item {
-  list-style: none;
-  padding: 0 2rem;
-  margin: 1rem 0;
+.navbar a {
+  color: #fff;
 }
 
-.navbar-links {
-  color: #000;
+.navbar a.navbar-brand {
+  float: left;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 30px;
+  font-size: 22px;
   text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
-.navbar-links:hover {
-  color: #a8a8a8;
+.navbar a.navbar-brand span {
+  font-size: 28px;
+  font-weight: 700;
 }
 
-.menu-btn {
-  /* position: relative;
+.navbar ul {
+  float: right;
+  list-style: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 50px;
+}
+
+.navbar ul li {
+  display: inline-block;
+}
+
+.navbar ul li a {
+  display: block;
+  text-align: center;
+  padding: 0 30px;
+  min-width: 120px;
+  transition: border-bottom 0.5s ease-in;
+}
+
+.navbar ul li a:hover {
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  /* color: rgba(255, 255, 255, 0.15); */
+}
+
+.navbar .navbar-toggler {
+  display: none;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.intro video {
+  z-index: -1;
+}
+
+/* About */
+#about {
+  background-color: #eee;
   display: flex;
   justify-content: center;
-	align-items: center; */
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  display: none;
-  /* border: 3px solid #fff; */
+  align-items: center;
+  padding-top: 100px;
 }
 
-.menu-btn__burger {
-  width: 40px;
-  height: 6px;
-  background: #000;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
+.about-container {
+  position: relative;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu-btn__burger::before,
-.menu-btn__burger::after {
-  content: "";
-  position: absolute;
+.left-side {
+  position: relative;
+  width: 300px;
+}
+
+.left-side img {
+  width: 100%;
+  height: 100%;
+}
+
+.right-side {
+  position: relative;
+  width: 300px;
+  margin-top: 75px;
+  margin-left: 30px;
+}
+
+.right-side h2 {
+  position: relative;
+  margin-top: -100px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.right-side .name {
+  width: 400px;
+  height: 50px;
+  background: #fff;
+  box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  margin-left: -100px;
+  margin-bottom: 30px;
+}
+
+.right-side .name h1 {
+  padding: 10px 10px;
+  font-stretch: 20px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
+
+.right-side span {
+  display: block;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 3px;
+  background: #c4313180;
+}
+
+.description p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.icons {
+  position: relative;
+  margin-top: 30px;
+}
+
+.icons .fab {
   width: 50px;
-  height: 6px;
+  height: 50px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+
+.icons .fab:hover {
   background: #000;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+  transform: rotate(360deg);
 }
 
-.menu-btn__burger::before {
-  transform: translateY(-16px);
-}
-
-.menu-btn__burger::after {
-  transform: translateY(16px);
-}
-
-/* Animation */
-.menu-btn.open .menu-btn__burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-}
-
-.menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-
-.menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+/* Education */
+#education {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 100px;
 }
 
 /* Skills */
 .skills-section {
-  padding-bottom: 1rem;
-  margin: 2rem auto;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 100px;
 }
 
 .skills-header {
@@ -165,12 +255,14 @@ a {
   text-align: center;
   width: 50%;
   margin: 0 auto;
+  padding: 0;
 }
 
-.skills-subheader {
+.skills-text {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-size: 18px;
+  text-align: center;
 }
 
 .skills-data {
@@ -183,11 +275,13 @@ a {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  background-color: #fff;
 }
 
 .skills-names {
   display: flex;
   align-items: center;
+  color: #000;
 }
 
 .skills-bar {
@@ -271,40 +365,82 @@ a {
   }
 }
 
-/* About */
-.card {
-  display: flex;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 600px;
-  margin: 100px auto;
-}
-.profile-sidebar img {
-  width: 125px;
+/* Projects */
+#projects {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 100px;
 }
 
-@media screen and (max-width: 900px) {
-  #header {
-    margin: 0 auto;
+@media screen and (max-width: 767px) {
+  .navbar {
+    padding: 0;
   }
-
-  #navbar {
-    padding: 10px 0;
-  }
-  .navbar-menu {
-    padding: 10px 0;
-    display: none;
-    flex-direction: column;
-    align-items: center;
+  .navbar ul {
     width: 100%;
-    /* background-color: rgba(0, 0, 0, 0.8); */
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
   }
-
-  .navbar-menu.show {
-    display: flex;
+  .navbar ul.open {
+    max-height: 100vh;
   }
-
-  .menu-btn {
+  .navbar ul li {
+    width: 100%;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  }
+  .navbar ul li a {
+    padding: 0;
+  }
+  .navbar .navbar-toggler {
     display: block;
+    position: absolute;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #fff;
+    /* border: 3px solid #fff; */
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+  .navbar .navbar-toggler span,
+  .navbar .navbar-toggler span::before,
+  .navbar .navbar-toggler span::after {
+    display: block;
+    content: "";
+    background-color: #fff;
+    height: 3px;
+    width: 28px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .navbar .navbar-toggler span::before {
+    transform: translateY(-8px);
+  }
+
+  .navbar .navbar-toggler span::after {
+    transform: translateY(5px);
+  }
+
+  .navbar .navbar-toggler.open-navbar-toggler span {
+    /* transform: rotate(90deg); */
+    background-color: transparent;
+    transform: scale(0.85) rotate(270deg);
+  }
+
+  .navbar .navbar-toggler.open-navbar-toggler span::before {
+    /* transform: translateY(0) rotate(45deg); */
+    transform: translateY(0) scale(0.75) rotate(45deg);
+  }
+
+  .navbar .navbar-toggler.open-navbar-toggler span::after {
+    /* transform: translateY(-3px) rotate(-45deg); */
+    transform: translateY(-3px) scale(0.75) rotate(-45deg);
   }
 }

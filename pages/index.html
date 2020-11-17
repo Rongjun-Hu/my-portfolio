@@ -21,60 +21,64 @@
         <li><a href="#about">About Me</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
       <button class="navbar-toggler">
         <span></span>
       </button>
     </nav>
 
-    <header class="intro"></header>
+    <header class="intro">
+      <video autoplay muted loop>
+        <source src="../videos/video1.mp4" type="video/mp4" />
+      </video>
+    </header>
 
     <!-- About Section -->
-    <section id="about" class="container">
-      <div class="card">
-        <div class="profile-sidebar">
-          <img src="../images/profile.jpeg" alt="" />
-          <ul>
-            <li>
-              <a href="https://github.com/Rongjun-Hu" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/peter-hu-8a6a05190/"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </li>
-          </ul>
+    <section id="about">
+      <div class="about-container">
+        <div class="left-side">
+          <img src="../images/about-profile.jpeg" alt="" />
         </div>
-
-        <div class="profile-main">
-          <h2 class="profile-name">Peter</h2>
-          <p class="profile-position">Front-End Developer</p>
-          <p class="profile-body">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-            impedit porro sunt harum officiis nesciunt, fugiat optio doloribus
-            magnam nemo.
-          </p>
+        <div class="right-side">
+          <h2>Web Developer</h2>
+          <div class="name">
+            <h1>Peter Hu</h1>
+          </div>
+          <span></span>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+              voluptatum quis inventore omnis illo tenetur repudiandae totam
+              corporis iure quidem?
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aut
+              quis necessitatibus a ipsam provident, harum sequi soluta
+              voluptate veniam.
+            </p>
+          </div>
+          <div class="icons">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="container">
+    <section id="education">
       <h1>This is Education Section</h1>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="container">
-      <div class="skills-section" id="skills">
+      <div class="skills-section">
         <h2 class="skills-header">Skills</h2>
+        <p class="skills-text">Profession Skills</p>
         <div class="skills-container">
           <div>
-            <div class="skills-subheader">Professional Skills</div>
-
             <!-- HTML5 -->
             <div class="skills-data">
               <div class="skills-names">
@@ -128,7 +132,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container">
+    <section id="projects">
       <h1>This is Projects Section</h1>
     </section>
 
@@ -138,7 +142,7 @@
       <script>
         document.write(new Date().getFullYear());
       </script>
-      Peter Hu
+      All rights reserved Peter Hu
     </footer>
 
     <script src="../js/index.js"></script>
