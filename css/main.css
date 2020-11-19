@@ -39,6 +39,25 @@ body {
   z-index: 1;
 }
 
+.up {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #eee;
+  top: -1rem;
+  right: 5rem;
+  border-radius: 100%;
+  display: flex;
+  animation: pulse 2s infinite;
+  cursor: pointer;
+}
+
+.up i {
+  color: #16162d;
+  font-size: 1rem;
+  margin: auto;
+}
+
 .container {
   position: relative;
   height: 100vh;
@@ -68,7 +87,7 @@ a {
 
 .navbar.sticky {
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 5px 10px;
+  padding: 0;
   transition: all 0.4s ease-in-out;
 }
 
@@ -81,7 +100,7 @@ a {
   height: inherit;
   line-height: inherit;
   padding: 0 30px;
-  font-size: 22px;
+  font-size: 40px;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
@@ -107,14 +126,15 @@ a {
 .navbar ul li a {
   display: block;
   text-align: center;
-  padding: 0 30px;
+  padding: 0 10px;
   min-width: 120px;
-  transition: border-bottom 0.5s ease-in;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .navbar ul li a:hover {
-  /* background-color: rgba(255, 255, 255, 0.15); */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
   /* color: rgba(255, 255, 255, 0.15); */
 }
 
@@ -124,26 +144,29 @@ a {
 
 .intro {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-color: #000;
 }
 
 .intro video {
   z-index: -1;
+  max-width: 100%;
+  height: auto;
 }
 
 /* About */
 #about {
   background-color: #eee;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 
 .about-container {
   position: relative;
-  width: 800px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,25 +256,90 @@ a {
 
 /* Education */
 #education {
-  background-color: rgba(0, 0, 0, 0.9);
-  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#education h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-top: 5rem;
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.education-container {
+  width: 90%;
+}
+
+.box {
+  background: #fff;
+  max-width: 60rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.3rem #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  margin: 2rem;
+}
+
+.box:nth-child(2) {
+  float: right;
+}
+
+.info {
+  padding-left: 1rem;
+  border-left: 0.4rem solid #eee;
+}
+
+.info h2 {
+  font-size: 1.7rem;
+}
+
+.info p {
+  font-size: 1rem;
+}
+
+.uts-img {
+  width: 250px;
+  height: 120px;
+}
+
+.wentworth-img {
+  width: 250px;
+  height: 60px;
+  margin-right: 1rem;
 }
 
 /* Skills */
+#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .skills-section {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   padding-top: 100px;
+  width: 100%;
 }
 
 .skills-header {
-  text-align: center;
   font-size: 2rem;
-  padding-bottom: 1rem;
+  text-transform: uppercase;
+  padding-top: 5rem;
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
 }
 
 .skills-container {
-  row-gap: 2rem;
+  flex-flow: column;
   text-align: center;
   width: 50%;
   margin: 0 auto;
@@ -281,6 +369,10 @@ a {
 .skills-names {
   display: flex;
   align-items: center;
+  color: #000;
+}
+
+.skills-percentage {
   color: #000;
 }
 
@@ -365,13 +457,27 @@ a {
   }
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+  }
+
+  70% {
+    box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+  }
+}
+
 /* Projects */
 #projects {
   background-color: rgba(0, 0, 0, 0.9);
   padding-top: 100px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 803px) {
   .navbar {
     padding: 0;
   }
@@ -386,6 +492,7 @@ a {
   }
   .navbar ul.open {
     max-height: 100vh;
+    /* width: 100vw; */
   }
   .navbar ul li {
     width: 100%;
@@ -442,5 +549,23 @@ a {
   .navbar .navbar-toggler.open-navbar-toggler span::after {
     /* transform: translateY(-3px) rotate(-45deg); */
     transform: translateY(-3px) scale(0.75) rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .box {
+    flex-flow: column;
+    padding: 1.5rem;
+  }
+
+  .info {
+    padding-left: 0;
+    padding-top: 3rem;
+    border: none;
+    text-align: center;
+  }
+
+  .info p {
+    padding: 1rem;
   }
 }

@@ -86,3 +86,11 @@ function easeInOutCubic(t, b, c, d) {
 	t -= 2;
 	return c / 2 * (t * t * t + 2) + b;
 };
+
+$(document).ready(function () {
+	$("#up").on("click", function () {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 1400)
+	})
+})
