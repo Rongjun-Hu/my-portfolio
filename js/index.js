@@ -73,6 +73,7 @@ function smoothScroll(event) {
 		window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration))
 		if (progress < duration) window.requestAnimationFrame(step)
 
+
 	}
 }
 
@@ -94,3 +95,4 @@ $(document).ready(function () {
 		}, 1400)
 	})
 })
+
