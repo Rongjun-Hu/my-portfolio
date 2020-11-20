@@ -232,6 +232,12 @@ li {
   justify-self: center;
 }
 
+.about-details p {
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
 .about-heading {
   text-align: center;
   text-transform: uppercase;
