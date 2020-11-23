@@ -303,6 +303,7 @@ li {
   list-style: none;
   text-align: left;
   width: 70%;
+  left: 18rem;
 }
 
 .timeline h1 {
@@ -380,9 +381,16 @@ li {
 }
 
 .service h1 {
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 2rem -2px 2rem 0; /* top right bottom left*/
+}
+
+.service h6 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .icon-container {
@@ -624,15 +632,28 @@ li {
 
 /* media queries */
 @media screen and (max-width: 1165px) {
-  .nav-list {
-    flex-direction: column;
-  }
   li {
     margin: 2rem 0;
   }
 
   .nav-link {
     font-size: 4rem;
+  }
+
+  .about-details p {
+    font-size: 1.8rem;
+  }
+
+  .timeline ul {
+    left: 5rem;
+  }
+
+  .timeline .date::before {
+    left: -19rem;
+  }
+
+  .timeline .date::after {
+    left: -5.9rem;
   }
 }
 
@@ -664,7 +685,7 @@ li {
   }
 
   .about-heading h1 {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 
   .section-heading h1 {
@@ -687,9 +708,27 @@ li {
   .icon-container i {
     font-size: 4rem;
   }
+
+  .timeline ul {
+    left: 5rem;
+  }
+
+  .timeline .date img,
+  .timeline .date h1,
+  .timeline .date p {
+    margin-left: 6rem;
+  }
+
+  .timeline .date::before {
+    left: -19rem;
+  }
+
+  .timeline .date::after {
+    left: -5.9rem;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
   .menu-toggler {
     width: 3.5rem;
     height: 2.5em;
@@ -743,5 +782,17 @@ li {
   .portfolio-description {
     margin: 0;
     order: 2;
+  }
+
+  .timeline ul {
+    left: 5rem;
+  }
+
+  .timeline .date::before {
+    left: -19rem;
+  }
+
+  .timeline .date::after {
+    left: -5.9rem;
   }
 }
