@@ -490,6 +490,18 @@ li {
   animation: js-react 2s;
 }
 
+.skills-vuejs-bar {
+  background-color: #3fba84;
+  width: 30%;
+  animation: vuejs 2s;
+}
+
+.skills-mongodb-bar {
+  background-color: #50a94b;
+  width: 40%;
+  animation: mongodb 2s;
+}
+
 .skills-html-icon {
   color: #ff5c01;
 }
@@ -504,6 +516,14 @@ li {
 
 .skills-react-icon {
   color: #62dafc;
+}
+
+.skills-vuejs-icon {
+  color: #3fba84;
+}
+
+.skills-mongodb-icon {
+  color: #50a94b;
 }
 /* End skills */
 
@@ -607,6 +627,24 @@ li {
 }
 
 @keyframes js-react {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes vuejs {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes mongodb {
   0% {
     width: 0;
   }
